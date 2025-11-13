@@ -787,7 +787,7 @@ kubectl config current-context
 
 ---
 
-### 6. Troubleshooting Comum
+### 6. Troubleshooting ComumM
 
 **Problema:** Cluster fica "Pending" ou "Waiting"
 
