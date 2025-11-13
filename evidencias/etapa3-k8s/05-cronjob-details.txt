@@ -1,0 +1,47 @@
+Name:                          cronjob-fechamento-reserva
+Namespace:                     unifiapay
+Labels:                        app=auditoria-cronjob
+Annotations:                   <none>
+Schedule:                      0 */6 * * *
+Concurrency Policy:            Allow
+Suspend:                       False
+Successful Job History Limit:  3
+Failed Job History Limit:      1
+Starting Deadline Seconds:     <unset>
+Selector:                      <unset>
+Parallelism:                   <unset>
+Completions:                   <unset>
+Pod Template:
+  Labels:           app=auditoria-cronjob
+  Service Account:  unifiapay-sa
+  Containers:
+   auditoria-cronjob:
+    Image:      jvreis23/auditoria-service:v1.556643
+    Port:       <none>
+    Host Port:  <none>
+    Limits:
+      cpu:     200m
+      memory:  128Mi
+    Requests:
+      cpu:     50m
+      memory:  64Mi
+    Environment Variables from:
+      unifiapay-config  ConfigMap  Optional: false
+    Environment:
+      EXECUTION_MODE:  once
+    Mounts:
+      /var/logs/api from shared-logs (rw)
+  Volumes:
+   shared-logs:
+    Type:            HostPath (bare host directory volume)
+    Path:            /tmp/unifiapay-logs
+    HostPathType:    DirectoryOrCreate
+  Node-Selectors:    <none>
+  Tolerations:       <none>
+Last Schedule Time:  <unset>
+Active Jobs:         <none>
+Events:
+  Type     Reason         Age                   From                Message
+  ----     ------         ----                  ----                -------
+  Warning  UnexpectedJob  10m (x3 over 10m)     cronjob-controller  Saw a job that the controller did not create or forgot: liquidacao-debug
+  Warning  UnexpectedJob  3m6s (x5 over 3m12s)  cronjob-controller  Saw a job that the controller did not create or forgot: liquidacao-final

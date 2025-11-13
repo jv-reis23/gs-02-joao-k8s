@@ -1,0 +1,10 @@
+Name:         unifiapay-rolebinding
+Labels:       app=unifiapay
+Annotations:  <none>
+Role:
+  Kind:  Role
+  Name:  unifiapay-role
+Subjects:
+  Kind            Name          Namespace
+  ----            ----          ---------
+  ServiceAccount  unifiapay-sa  unifiapay

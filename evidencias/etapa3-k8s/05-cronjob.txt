@@ -1,0 +1,2 @@
+NAME                         SCHEDULE      SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+cronjob-fechamento-reserva   0 */6 * * *   False     0        <none>          10m

@@ -1,0 +1,15 @@
+api-pagamentos  | 2025-11-10 20:51:45 - reserva-service - INFO - Reserva Bancária inicializada: R$ 1000000.0
+api-pagamentos  | 2025-11-10 20:51:45 - api-pagamentos - INFO - Iniciando API de Pagamentos em 0.0.0.0:8080
+api-pagamentos  | 2025-11-10 20:51:45 - api-pagamentos - INFO - Reserva Bancária: R$ 1000000.0
+api-pagamentos  |  * Serving Flask app 'app'
+api-pagamentos  |  * Debug mode: off
+api-pagamentos  | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+api-pagamentos  |  * Running on all addresses (0.0.0.0)
+api-pagamentos  |  * Running on http://127.0.0.1:8080
+api-pagamentos  |  * Running on http://172.25.0.10:8080
+api-pagamentos  | [33mPress CTRL+C to quit[0m
+api-pagamentos  | 172.25.0.1 - - [10/Nov/2025 20:52:01] "GET /health HTTP/1.1" 200 -
+api-pagamentos  | 172.25.0.1 - - [10/Nov/2025 20:54:16] "GET /health HTTP/1.1" 200 -
+api-pagamentos  | 172.25.0.1 - - [10/Nov/2025 20:54:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+api-pagamentos  | 172.25.0.1 - - [10/Nov/2025 20:54:17] "GET /health HTTP/1.1" 200 -
+api-pagamentos  | 172.25.0.1 - - [10/Nov/2025 21:00:54] "GET /health HTTP/1.1" 200 -

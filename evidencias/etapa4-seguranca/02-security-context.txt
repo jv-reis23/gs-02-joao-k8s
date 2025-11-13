@@ -1,0 +1,35 @@
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"api-pagamentos","tier":"backend"},"name":"api-pagamentos","namespace":"unifiapay"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"api-pagamentos"}},"template":{"metadata":{"labels":{"app":"api-pagamentos","tier":"backend"}},"spec":{"containers":[{"envFrom":[{"configMapRef":{"name":"unifiapay-config"}}],"image":"jvreis23/api-pagamentos:v1.556643","imagePullPolicy":"Always","livenessProbe":{"failureThreshold":3,"httpGet":{"path":"/health","port":8080},"initialDelaySeconds":30,"periodSeconds":10,"timeoutSeconds":5},"name":"api-pagamentos","ports":[{"containerPort":8080,"name":"http","protocol":"TCP"}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/health","port":8080},"initialDelaySeconds":10,"periodSeconds":5,"timeoutSeconds":3},"resources":{"limits":{"cpu":"500m","memory":"256Mi"},"requests":{"cpu":"100m","memory":"128Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":false,"runAsNonRoot":true,"runAsUser":1000},"volumeMounts":[{"mountPath":"/var/logs/api","name":"shared-logs"},{"mountPath":"/app/pix.key","name":"pix-key","readOnly":true,"subPath":"pix.key"}]}],"securityContext":{"fsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"serviceAccountName":"unifiapay-sa","volumes":[{"hostPath":{"path":"/tmp/unifiapay-logs","type":"DirectoryOrCreate"},"name":"shared-logs"},{"name":"pix-key","secret":{"items":[{"key":"pix.key","path":"pix.key"}],"secretName":"unifiapay-secrets"}}]}}}}
+  creationTimestamp: "2025-11-11T05:14:15Z"
+  generation: 5
+  labels:
+    app: api-pagamentos
+    tier: backend
+  name: api-pagamentos
+  namespace: unifiapay
+  resourceVersion: "7172"
+  uid: 01f44212-a21f-4e03-a22e-b029ca2bc782
+spec:
+--
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: false
+          runAsNonRoot: true
+          runAsUser: 1000
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+--
+      securityContext:
+        fsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
+        seccompProfile:
+          type: RuntimeDefault
+      serviceAccount: unifiapay-sa
+      serviceAccountName: unifiapay-sa
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:

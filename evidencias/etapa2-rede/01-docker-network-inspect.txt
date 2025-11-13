@@ -1,0 +1,44 @@
+[
+    {
+        "Name": "docker_unifiap_net",
+        "Id": "98947e8efd923b3f3581700fb2ef3a85fd852e5eaf74444185a8100c56e5c4b5",
+        "Created": "2025-11-10T17:51:44.363028555-03:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.25.0.0/24",
+                    "Gateway": "172.25.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "8d3aac371231f14f1757c19f1b730756a8dfa2093c8744edb778e28293503704": {
+                "Name": "api-pagamentos",
+                "EndpointID": "e361e795c78e2c51759307f9c3057e95bcee66c7edb2078e15469f2c37438995",
+                "MacAddress": "32:85:49:61:6e:64",
+                "IPv4Address": "172.25.0.10/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "4f49b8d1c33d073a0ca8a89e59771b7e2092a63b2d7a86015f865f70a89aa01a",
+            "com.docker.compose.network": "unifiap_net",
+            "com.docker.compose.project": "docker",
+            "com.docker.compose.version": "2.40.3"
+        }
+    }
+]

@@ -1,0 +1,2 @@
+NAME                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+unifiapay-logs-pvc   Bound    pvc-75b08ec1-fb9f-4631-b53f-0cd01fa482de   1Gi        RWO            standard       37m

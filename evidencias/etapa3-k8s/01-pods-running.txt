@@ -1,0 +1,6 @@
+NAME                                 READY   STATUS      RESTARTS   AGE     IP            NODE                      NOMINATED NODE   READINESS GATES
+api-pagamentos-65659d7c6c-6z85r      1/1     Running     0          6m22s   10.244.0.22   unifiapay-control-plane   <none>           <none>
+api-pagamentos-65659d7c6c-x5jl6      1/1     Running     0          6m1s    10.244.0.23   unifiapay-control-plane   <none>           <none>
+auditoria-service-5bdf567d77-z5mhb   1/1     Running     0          9m36s   10.244.0.20   unifiapay-control-plane   <none>           <none>
+liquidacao-debug-czmzc               0/1     Completed   0          8m36s   10.244.0.21   unifiapay-control-plane   <none>           <none>
+liquidacao-final-wncn8               0/1     Completed   0          95s     10.244.0.24   unifiapay-control-plane   <none>           <none>

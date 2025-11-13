@@ -1,0 +1,6 @@
+=== TESTE DE PERMISSÕES RBAC ===
+Pode listar pods?
+yes
+
+Pode deletar pods?
+no

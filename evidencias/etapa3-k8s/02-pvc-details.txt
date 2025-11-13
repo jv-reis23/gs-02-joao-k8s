@@ -1,0 +1,23 @@
+Name:          unifiapay-logs-pvc
+Namespace:     unifiapay
+StorageClass:  standard
+Status:        Bound
+Volume:        pvc-75b08ec1-fb9f-4631-b53f-0cd01fa482de
+Labels:        app=unifiapay
+Annotations:   pv.kubernetes.io/bind-completed: yes
+               pv.kubernetes.io/bound-by-controller: yes
+               volume.beta.kubernetes.io/storage-provisioner: rancher.io/local-path
+               volume.kubernetes.io/selected-node: unifiapay-control-plane
+               volume.kubernetes.io/storage-provisioner: rancher.io/local-path
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      1Gi
+Access Modes:  RWO
+VolumeMode:    Filesystem
+Used By:       <none>
+Events:
+  Type    Reason                 Age   From                                                                                                Message
+  ----    ------                 ----  ----                                                                                                -------
+  Normal  WaitForFirstConsumer   37m   persistentvolume-controller                                                                         waiting for first consumer to be created before binding
+  Normal  ExternalProvisioning   37m   persistentvolume-controller                                                                         waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+  Normal  Provisioning           37m   rancher.io/local-path_local-path-provisioner-6bc4bddd6b-7vjkg_ee866f88-acb5-4596-8336-5829804e7fd2  External provisioner is provisioning volume for claim "unifiapay/unifiapay-logs-pvc"
+  Normal  ProvisioningSucceeded  37m   rancher.io/local-path_local-path-provisioner-6bc4bddd6b-7vjkg_ee866f88-acb5-4596-8336-5829804e7fd2  Successfully provisioned volume pvc-75b08ec1-fb9f-4631-b53f-0cd01fa482de
